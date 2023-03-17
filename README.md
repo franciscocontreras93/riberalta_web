@@ -3,14 +3,25 @@
 Aplicacion web para gestion de datos catastral.
 
 ## Instalacion
+Requisitos NODE.js, GULP, VirtualEnv, Postgresql
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+instalar los paquetes necesarios para el funcionamiento de la aplicacion y el entorno. 
+Luego ejecutar 
+
+<!-- Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar. -->
 
 ```bash
-pip install foobar
+pip install -r requirements.txt
 ```
 
-## Usage
+Ejecutar los comandos de GULP para crear archivos estaticos 
+
+```bash
+gulp
+```
+
+
+<!-- ## Usage
 
 ```python
 import foobar
@@ -34,4 +45,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/) -->
