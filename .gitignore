@@ -1,6 +1,6 @@
 
 env
-static
+# static
 staticfiles
 node_modules
 

@@ -1,0 +1,27 @@
+/*
+Template Name: Velzon - Admin & Dashboard Template
+Author: Themesbrand
+Website: https://themesbrand.com/
+Contact: support@themesbrand.com
+File: Custom Css File
+*/
+.auth-bg-cover {
+  background: linear-gradient(120deg, #133b50 0%, #0A2B3D 100%);
+}
+
+.topbar-user {
+  background-color: transparent;
+}
+
+.auth-one-bg {
+  background-image: url("../images/login_page.jpg");
+}
+.auth-one-bg .bg-overlay {
+  background: -webkit-gradient(linear, left top, right top, from(#768088), to(#596164));
+  background: linear-gradient(to right, #768088, #596164);
+  opacity: 0.5;
+}
+
+.mapLabel {
+  background-color: transparent !important;
+}
