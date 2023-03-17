@@ -1,0 +1,11 @@
+//
+// _leaflet-maps.scss
+//
+
+.leaflet-map {
+    height: 75vh;
+    &.leaflet-container{
+        z-index: 0;
+        font-family: $font-family-primary;
+    }
+}

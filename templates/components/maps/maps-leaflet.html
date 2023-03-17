@@ -1,0 +1,64 @@
+{% extends "partials/base.html" %}
+{% load static %}
+{% block title %}Vista Lote{% endblock title %}
+{% block extra_css %}
+    <!-- leaflet Css -->
+    <link href="{% static 'libs/leaflet/leaflet.css'%}" rel="stylesheet" type="text/css" />
+    <link href="
+    https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.css
+    " rel="stylesheet">
+{% endblock extra_css %}
+{% block content %}
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    
+                    <div class="row">
+                        {% block pagetitle %}
+                        {% include "partials/page-title.html" with seccion="Lote " pagetitle="Inspeccion" title=codigo_catastral %}
+                        {% endblock pagetitle %}
+                        <div class="col-lg-12">
+                            <div id="leaflet-map" class="leaflet-map"></div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+        {% block footer %}
+        {% include "partials/footer.html" %}
+        {% endblock footer %}
+        </div>
+        <!-- end main content-->
+{% endblock content %}
+{% block extra_js %}
+    <!-- prismjs plugin -->
+    <script src="{% static 'libs/prismjs/prism.js'%}"></script>
+
+    <!-- leaflet plugin -->
+    <script src="{% static 'libs/leaflet/leaflet.js'%}"></script>
+
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.js
+    "></script>
+
+    <!-- leaflet map.init -->
+    <script src="{% static 'js/pages/leaflet-us-states.js'%}"></script>
+    <script src="{% static 'js/pages/leaflet-map.init.js'%}"></script>
+    <script>
+        t = '{{terrenos|safe}}'
+        data = JSON.parse(t)
+        map_init('leaflet-map',data)
+    </script>        
+{% endblock extra_js %}

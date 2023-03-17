@@ -1,0 +1,42 @@
+{% extends "partials/base.html" %}
+{% load static %}
+{% block title %}Encuesta{% endblock title %}
+{% block content %}
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    {% block pagetitle %}
+                    {% comment %} {% include "partials/page-title.html" with pagetitle="Formulario" title=codigo_catastral %} {% endcomment %}
+                    {% endblock pagetitle %}
+
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <form action="">
+                                {% csrf_token %}
+                                {{titular_form.as_p}}
+                            </form>
+                            
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div><!-- end row -->
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+        {% block footer %}
+        {% include "partials/footer.html" %}
+        {% endblock footer %}
+        </div>
+        <!-- end main content-->
+{% endblock content %}
+{% block extra_js %}
+    <!-- form wizard init -->
+    <script src="{% static 'js/pages/form-wizard.init.js'%}"></script>
+{% endblock extra_js %}
